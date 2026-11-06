@@ -15,10 +15,10 @@ const String bannerTestId =
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await MobileAds.instance.initialize();
-  runApp(const YourDayApp());
+  runApp(const xvdoApp());
 }
 
-class XvdoApp extends StatelessWidget {
+class xvdoApp extends StatelessWidget {
   const xvdoApp({super.key});
 
   @override
