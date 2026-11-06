@@ -24,7 +24,7 @@ class XNXXVIDEOSApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'YOURDAY',
+      title: 'XNXXVIDEOS',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorSchemeSeed: Colors.blue,
@@ -101,7 +101,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'YOURDAY',
+          'XNXXVIDEOS',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
