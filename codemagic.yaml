@@ -1,0 +1,51 @@
+workflows:
+  yourday-android:
+    name: YOURDAY Android APK
+    max_build_duration: 60
+    instance_type: linux_x2
+
+    environment:
+      flutter: stable
+
+    scripts:
+      - name: Generate Android project
+        script: |
+          flutter create --platforms=android --project-name yourday /tmp/yourday_scaffold
+          cp -R /tmp/yourday_scaffold/android ./android
+
+      - name: Configure AdMob
+        script: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          p = Path("android/app/src/main/AndroidManifest.xml")
+          s = p.read_text()
+
+          if "android.permission.INTERNET" not in s:
+              s = s.replace(
+                  "<application",
+                  '<uses-permission android:name="android.permission.INTERNET"/>\\n    <application',
+                  1
+              )
+
+          if "com.google.android.gms.ads.APPLICATION_ID" not in s:
+              s = s.replace(
+                  "</application>",
+                  '''
+                  <meta-data
+                      android:name="com.google.android.gms.ads.APPLICATION_ID"
+                      android:value="ca-app-pub-3940256099942544~3347511713" />
+                  </application>'''
+              )
+
+          p.write_text(s)
+          PY
+
+      - name: Install packages
+        script: flutter pub get
+
+      - name: Build APK
+        script: flutter build apk --debug
+
+    artifacts:
+      - build/app/outputs/flutter-apk/*.apk
