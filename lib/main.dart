@@ -6,7 +6,7 @@ import 'package:webview_flutter/webview_flutter.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 const String feedUrl =
-    'https://uwupsonline.blogspot.com/feeds/posts/default?alt=rss&max-results=50';
+    'https://xnxxvdeoss.blogspot.com/feeds/posts/default?alt=rss&max-results=50';
 
 // Google AdMob Test Banner ID
 const String bannerTestId =
@@ -18,8 +18,8 @@ Future<void> main() async {
   runApp(const YourDayApp());
 }
 
-class YourDayApp extends StatelessWidget {
-  const YourDayApp({super.key});
+class XNXXVIDEOSApp extends StatelessWidget {
+  const xnxxvideosApp({super.key});
 
   @override
   Widget build(BuildContext context) {
