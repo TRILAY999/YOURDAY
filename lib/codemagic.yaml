@@ -1,6 +1,6 @@
 workflows:
-  xnxxvideos-android:
-    name: XNXXVIDEOS Android APK
+xvdo-android:
+    name: xvdo Android APK
     max_build_duration: 60
     instance_type: mac_mini_m2
 
@@ -10,8 +10,8 @@ workflows:
     scripts:
       - name: Generate Android project
         script: |
-          flutter create --platforms=android --project-name xnxxvideos /tmp/xnxxvideos_scaffold
-          cp -R /tmp/xnxxvideos_scaffold/android ./android
+          flutter create --platforms=android --project-name xvdo /tmp/xvdo_scaffold
+          cp -R /tmp/xvdo_scaffold/android ./android
 
       - name: Configure AdMob
         script: |
