@@ -18,13 +18,13 @@ Future<void> main() async {
   runApp(const YourDayApp());
 }
 
-class XNXXVIDEOSApp extends StatelessWidget {
-  const xnxxvideosApp({super.key});
+class XvdoApp extends StatelessWidget {
+  const xvdoApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'XNXXVIDEOS',
+      title: 'xvdo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorSchemeSeed: Colors.blue,
@@ -101,7 +101,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'XNXXVIDEOS',
+          'Xvdo',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
